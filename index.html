@@ -5,18 +5,47 @@
 </head>
 <body>
 
-<h1 style="font-family:verdana;color:#367c2b">Mélange 2024</h1>
+<h1 style="font-family:verdana;color:#367c2b">Mélange 2024 Agenda</h1>
 <p style="font-family:verdana">Please select your band color below:</p>
 
-  <select name="Batches">
-    <option value="Blue Group">Blue Group</option>
-    <option value="Yellow Group">Yellow Group</option>
-    <option value="Green Group">Green Group</option>
-    <option value="Pink Group">Pink Group</option>
+  <select id="dropdown" name="Batches" onchange="myFunction()">
+    <option style="font-family:verdana;" value="Blue Group">Blue Group</option>
+    <option style="font-family:verdana;" value="Yellow Group">Yellow Group</option>
+    <option style="font-family:verdana;" value="Green Group">Green Group</option>
+    <option style="font-family:verdana;" value="Pink Group">Pink Group</option>
   </select>
 
+<br>
+
+<img id="agendaImg" src = "img_girl.jpg";>
 
 
+<script>
+function myFunction() 
+{
+
+  var x = document.getElementById("dropdown");
+  var y = document.getElementById("agendaImg");
+  
+  if (x.value === "Blue Group") 
+  {
+    y.src = "Blue.jpg";
+  } 
+  else if (x.value === "Yellow Group") 
+  { 
+    y.src = "Yellow.jpg";
+  }
+  else if (x.value === "Green Group")
+  {
+    y.src = "Green.jpg";
+  }
+  else if (x.value === "Pink Group")
+  {
+    y.src = "Pink.jpg";
+  }
+}
+
+</script>
 </body>
 </html>
 
